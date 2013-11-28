@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bFindMy"
+            style="@style/ActionButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/action_button"
+            android:drawableLeft="@drawable/ic_action_place"
+            android:text="@string/find_button"
+            android:onClick="bFindMyClicked" />
+
+        <Button
+            android:id="@+id/bNavigation"
+            style="@style/ActionButton"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/action_button"
+            android:drawableLeft="@drawable/ic_action_split"
+            android:text="@string/navigate_button" 
+            android:onClick="bNavigationClicked" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12sp"
+            android:textColor="#ccc"
+            android:text="@string/copyrights"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"/>
+    </LinearLayout>
+
+</LinearLayout>
